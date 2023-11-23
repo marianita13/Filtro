@@ -8,6 +8,6 @@ namespace Domain.Interfaces
 {
     public interface IStatus : IGenericRepository<Status>
     {
-        
+        Task<object> ProductosSinOrden();
     }
 }

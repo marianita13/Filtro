@@ -29,6 +29,15 @@ public class StatusController: BaseController
             return _mapper.Map<List<Status>>(Statuses);
         }
 
+        [HttpGet("ProductosSinOrden")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<IEnumerable<Status>>> GetProductosSinOrden()
+        {
+            var Statuses = await _unitOfWork.Statuses.ProductosSinOrden();
+            return _mapper.Map<List<Status>>(Statuses);
+        }
+
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
