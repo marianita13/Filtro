@@ -14,6 +14,7 @@ namespace Persistence.Data.Configurations
             builder.Property(e => e.Id);
 
             builder.Property(e => e.Phone).IsRequired().HasMaxLength(50);
+            builder.Property(e => e.OfficeCode).IsRequired().HasMaxLength(50);
             builder.Property(e => e.AdressLine).IsRequired().HasMaxLength(50);
             builder.Property(e => e.AdressLine2).IsRequired().HasMaxLength(50);
 

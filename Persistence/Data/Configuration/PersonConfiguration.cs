@@ -15,7 +15,8 @@ namespace Persistence.Data.Configurations
 
             builder.Property(e => e.Name).IsRequired().HasMaxLength(50);
             builder.Property(e => e.LastName1).IsRequired().HasMaxLength(50);
-            builder.Property(e => e.LastName2).IsRequired().HasMaxLength(50);
+            builder.Property(e => e.LastName2).HasMaxLength(50);
+            builder.Property(e => e.Email).HasMaxLength(50);
 
             builder.HasOne(e => e.PersonType)
             .WithMany(e => e.Persons)

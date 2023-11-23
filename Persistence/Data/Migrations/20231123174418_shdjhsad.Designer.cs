@@ -11,8 +11,8 @@ using Persistence.Data;
 namespace Persistence.Data.Migrations
 {
     [DbContext(typeof(FiltroGardenContext))]
-    [Migration("20231123164809_INICIO")]
-    partial class INICIO
+    [Migration("20231123174418_shdjhsad")]
+    partial class shdjhsad
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -176,6 +176,11 @@ namespace Persistence.Data.Migrations
                     b.Property<int>("CityId")
                         .HasColumnType("int");
 
+                    b.Property<string>("OfficeCode")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
+
                     b.Property<int>("Phone")
                         .HasMaxLength(50)
                         .HasColumnType("int");
@@ -299,7 +304,8 @@ namespace Persistence.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("LastName1")
                         .IsRequired()
@@ -307,7 +313,6 @@ namespace Persistence.Data.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("LastName2")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 

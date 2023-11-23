@@ -20,6 +20,7 @@ namespace Domain.Interfaces
         IPersonType PersonTypes {get;}
         IProduct Products {get;}
         IProductLine ProductLines {get;}
+        IPostalCode PostalCodes {get;}
         IState States {get;}
         IStatus Statuses {get;}
         ISupplier Suppliers {get;}
